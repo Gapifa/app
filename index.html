@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#0C0C0C">
+  <title>Gapifa PWA</title>
+
+  <!-- فایل مانیفست دینامیک -->
+  <link rel="manifest" href="/manifest.php">
+
+  <!-- آیکون نصب -->
+  <link rel="icon" href="icon.png">
+
+  <script>
+    // خواندن آدرس دامنه فعال از فایل JSON
+    fetch('active-domain.json')
+      .then(response => response.json())
+      .then(data => {
+        if (data.domain) {
+          window.location.href = data.domain; // ری‌دایرکت
+        } else {
+          alert("دامنه فعال یافت نشد.");
+        }
+      })
+      .catch(err => {
+        alert("مشکلی در لود دامنه جدید پیش آمده.");
+      });
+  </script>
+</head>
+<body>
+  <h2 style="text-align:center;">در حال بارگذاری نسخه جدید...</h2>
+</body>
+</html>
