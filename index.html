@@ -3,38 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="theme-color" content="#0C0C0C">
+  <link rel="manifest" href="manifest.json">
   <title>Gapifa PWA</title>
-
-  <!-- فایل مانیفست دینامیک -->
-  <link rel="manifest" href="/manifest.php">
-
-  <!-- آیکون نصب -->
-  <link rel="icon" href="icon.png">
-
-  <script>
-    // خواندن آدرس دامنه فعال از فایل JSON
-    fetch('active-domain.json')
-      .then(response => response.json())
-      .then(data => {
-        if (data.domain) {
-          window.location.href = data.domain; // ری‌دایرکت
-        } else {
-          alert("دامنه فعال یافت نشد.");
-        }
-      })
-      .catch(err => {
-        alert("مشکلی در لود دامنه جدید پیش آمده.");
-      });
-  </script>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2rem; }
+    #go { margin-top: 2rem; padding: 1rem 2rem; font-size: 1.2rem; display: none; }
+  </style>
 </head>
 <body>
-  <h2 style="text-align:center;">در حال بارگذاری نسخه جدید...</h2>
-</body>
+  <h2>خوش آمدید به نسخه PWA گپیفا</h2>
+  <p>در حال دریافت آخرین دامنه سالم...</p>
+  <button id="go">ورود به سایت</button>
 
   <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service_worker.js');
-  }
-</script>
+    let latestDomain = null;
+    fetch('active-domain.json')
+      .then(res => res.json())
+      .then(data => {
+        if (data.domain) {
+          latestDomain = data.domain;
+          document.getElementById('go').style.display = 'inline-block';
+          document.getElementById('go').onclick = () => {
+            window.location.href = latestDomain;
+          };
+        }
+      });
 
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service_worker.js');
+    }
+  </script>
+</body>
 </html>
