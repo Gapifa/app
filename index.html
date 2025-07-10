@@ -30,4 +30,11 @@
 <body>
   <h2 style="text-align:center;">در حال بارگذاری نسخه جدید...</h2>
 </body>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service_worker.js');
+  }
+</script>
+
 </html>
