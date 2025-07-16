@@ -1,5 +1,5 @@
 <?php
-$latestDomain = "https://gpfa.duckspin.net/entry";
+$latestDomain = "https://gpfa.duckspin.net/entry/";
 
 header('Content-Type: application/json');
 echo json_encode([
