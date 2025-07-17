@@ -1,0 +1,22 @@
+{
+  "short_name": "Gapifa",
+  "name": "Gapifa Social Media",
+  "start_url": "https://gpfa.duckspin.net/entry/",
+  "scope": "https://gpfa.duckspin.net/entry/",
+  "display": "standalone",
+  "background_color": "#0C0C0C",
+  "theme_color": "#0C0C0C",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "https://gpfa.duckspin.net/entry/assets/files/defaults/pwa_icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "https://gpfa.duckspin.net/entry/assets/files/defaults/pwa_icon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    }
+  ]
+}
