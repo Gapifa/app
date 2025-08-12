@@ -1,8 +1,8 @@
 {
   "short_name": "Gapifa",
   "name": "Gapifa Social Media",
-  "start_url": "https://gapifa.bestar.sg/entry/",
-  "scope": "https://gapifa.bestar.sg/entry",
+  "start_url": "https://gpfa.wsharp.com//entry/",
+  "scope": "https://gpfa.wsharp.com/entry",
   "display": "standalone",
   "background_color": "#0C0C0C",
   "theme_color": "#0C0C0C",
