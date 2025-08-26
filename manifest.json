@@ -1,8 +1,8 @@
 {
   "short_name": "Gapifa",
   "name": "Gapifa Social Media",
-  "start_url": "gpfa.chanka.com",
-  "scope": "gpfa.chanka.com",
+  "start_url": "gapifa.com",
+  "scope": "gpfa.com",
   "display": "standalone",
   "background_color": "#0C0C0C",
   "theme_color": "#0C0C0C",
